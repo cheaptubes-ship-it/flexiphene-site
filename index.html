@@ -5,346 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flexiphene™ | NASA-Validated Nanocarbon Dispersion | CTI Materials</title>
 <meta name="description" content="Flexiphene™ delivers NASA-validated nanocarbon dispersion: 100× lower resistance, 96× higher capacitance, +19% polymer strength at 1% loading. U.S. Patented. Free sample.">
+<link rel="canonical" href="https://flexiphene.ctimaterials.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flexiphene.ctimaterials.com/">
+<meta property="og:title" content="Flexiphene™ | NASA-Validated Nanocarbon Dispersion">
+<meta property="og:description" content="Patented nanocarbon dispersion delivering 100× lower resistance, 96× higher capacitance, and +19% polymer strength at 1 wt.% loading. NASA JPL validated. Free sample available.">
+<meta property="og:image" content="https://flexiphene.ctimaterials.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Flexiphene™ | NASA-Validated Nanocarbon Dispersion">
+<meta name="twitter:description" content="100× lower resistance. 96× higher capacitance. +19% polymer strength. NASA JPL validated nanocarbon dispersion. Free sample.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #050814;
-  --bg2: #070d1f;
-  --bg3: #0a1024;
-  --bg4: #0f1733;
-  --cyan: #00b4ff;
-  --cyan-light: #24e1ff;
-  --purple: #6d00ff;
-  --purple-mid: #8b2fff;
-  --emerald: #34d399;
-  --lime: #b7ff5a;
-  --white: #ffffff;
-  --card-bg: #0d1530;
-  --card-border: rgba(0,180,255,0.15);
-  --card-border-soft: rgba(255,255,255,0.07);
-  --text: #e2e8f0;
-  --text-muted: rgba(255,255,255,0.55);
-  --text-dim: rgba(255,255,255,0.35);
-  --cyan-glow: rgba(0,180,255,0.18);
-  --purple-glow: rgba(109,0,255,0.18);
-  --section-alt: #080e1e;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6;
-  background: radial-gradient(80vw 60vh at 60% -10%, rgba(0,180,255,.05), transparent 60%), #050814;
-}
+<link rel="stylesheet" href="style.css">
 
-/* Glass morphism */
-.glass {
-  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-  border: 1px solid rgba(255,255,255,.12);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-}
-.glass-strong {
-  background: linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.06));
-  border: 1px solid rgba(255,255,255,.18);
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-}
-.glow-border { box-shadow: inset 0 0 0 1px rgba(0,180,255,.35), 0 0 0 1px rgba(0,180,255,.15); }
-.shadow-glow { box-shadow: 0 0 0 1px rgba(0,180,255,.25), 0 10px 30px rgba(0,0,0,.35), 0 0 40px rgba(0,180,255,.12); }
-
-/* Gradient text utility */
-.grad-text {
-  background: linear-gradient(90deg, #00b4ff, #ffffff, #6d00ff);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  filter: drop-shadow(0 0 8px rgba(0,180,255,.65));
-}
-/* Pulse animation */
-.pulse-ring { position: relative; }
-.pulse-ring::before {
-  content:''; position:absolute; inset:-6px; border-radius:inherit;
-  border:2px solid rgba(0,180,255,.35); filter:blur(5px); opacity:.7;
-  animation: pulse 2.4s ease-in-out infinite;
-}
-@keyframes pulse { 0%,100%{opacity:.2;transform:scale(.98);} 50%{opacity:.6;transform:scale(1.02);} }
-/* Count-up */
-.countup { transition: opacity .4s, transform .4s; }
-.countup.hidden-count { opacity:0; transform:translateY(6px); }
-
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(5,8,20,0.92); backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,180,255,0.1);
-  padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px;
-}
-.nav-logo { color: white; font-weight: 700; font-size: 1.2rem; text-decoration: none; }
-.nav-logo span { color: var(--cyan); }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-.nav-links a:hover { color: white; }
-.nav-cta {
-  background: linear-gradient(135deg, var(--cyan), var(--purple-mid));
-  color: white; padding: 0.5rem 1.25rem;
-  border-radius: 6px; text-decoration: none; font-size: 0.875rem; font-weight: 700;
-  transition: opacity 0.2s;
-}
-.nav-cta:hover { opacity: 0.85; }
-
-/* HERO */
-.hero {
-  background: var(--bg2);
-  background-image:
-    radial-gradient(1200px 800px at 20% -10%, var(--cyan-glow) 0, transparent 60%),
-    radial-gradient(1000px 600px at 90% 10%, var(--purple-glow) 0, transparent 60%);
-  padding: 120px 2rem 80px; text-align: center; position: relative; overflow: hidden;
-}
-.hero::after {
-  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0,180,255,0.3), rgba(109,0,255,0.3), transparent);
-}
-.hero-inner { position: relative; max-width: 900px; margin: 0 auto; }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: rgba(0,180,255,0.08); border: 1px solid rgba(0,180,255,0.25);
-  color: var(--cyan-light); padding: 0.4rem 1rem; border-radius: 100px;
-  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1.5rem;
-}
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; color: white;
-  line-height: 1.15; margin-bottom: 1.25rem;
-}
-/* grad-text defined globally above */
-.hero-sub {
-  font-size: 1.1rem; color: var(--text-muted); max-width: 680px;
-  margin: 0 auto 1rem; line-height: 1.7;
-}
-.hero-patent { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 2.5rem; }
-.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem; }
-.btn-primary {
-  background: linear-gradient(135deg, var(--cyan), var(--purple-mid));
-  color: white; padding: 0.875rem 2rem;
-  border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem;
-  transition: all 0.2s; box-shadow: 0 4px 24px rgba(0,180,255,0.3);
-}
-.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 6px 30px rgba(0,180,255,0.4); }
-.btn-secondary {
-  background: rgba(255,255,255,0.04); color: white; padding: 0.875rem 2rem;
-  border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem;
-  border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s;
-}
-.btn-secondary:hover { border-color: var(--cyan); background: rgba(0,180,255,0.06); }
-.trust-badges { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
-.trust-badge {
-  display: flex; align-items: center; gap: 0.5rem;
-  color: var(--text-muted); font-size: 0.85rem; font-weight: 500;
-}
-.trust-badge .icon { color: var(--cyan); font-size: 1rem; }
-
-/* STATS STRIP */
-.stats-strip {
-  background: var(--bg2); border-top: 1px solid rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.06); padding: 3rem 2rem;
-}
-.stats-strip-inner { max-width: 1100px; margin: 0 auto; }
-.stats-label { text-align: center; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 1.5rem; }
-.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; }
-.stat-card {
-  border-radius: 16px; padding: 1.5rem; text-align: center;
-}
-.stat-number {
-  font-size: 2.25rem; font-weight: 800; line-height: 1;
-  background: linear-gradient(90deg, #00b4ff, #ffffff);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-.stat-unit { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-top: 0.25rem; }
-.stat-desc { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem; }
-.stat-tag {
-  display: inline-block; background: rgba(52,211,153,0.12); color: var(--emerald);
-  font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px; margin-top: 0.5rem;
-}
-
-/* SECTIONS */
-.section { padding: 5rem 2rem; }
-.section-inner { max-width: 1100px; margin: 0 auto; }
-.section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); margin-bottom: 0.75rem; }
-.section-title { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; color: white; line-height: 1.2; margin-bottom: 1rem; }
-.section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 680px; line-height: 1.7; margin-bottom: 2.5rem; }
-.section-sub.wide { max-width: 100%; }
-.section--alt { background: var(--section-alt); }
-
-/* DUAL PATHWAY */
-.pathway-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 2rem; }
-.pathway-card { border-radius: 20px; overflow: hidden; }
-.pathway-header {
-  padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem;
-  background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-.pathway-icon { font-size: 2rem; }
-.pathway-title { color: white; font-weight: 700; font-size: 1.1rem; }
-.pathway-subtitle { color: var(--text-muted); font-size: 0.85rem; }
-.pathway-body { padding: 1.5rem 2rem; }
-.pathway-body table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin-bottom: 1rem; }
-.pathway-body thead tr { border-bottom: 1px solid rgba(255,255,255,0.1); }
-.pathway-body th { padding: 0.7rem 0.8rem; font-weight: 700; font-size: 0.78rem; }
-.pathway-body th.col-product { color: var(--cyan); }
-.pathway-body th.col-baseline { color: var(--text-dim); }
-.pathway-body th.col-improve { color: var(--emerald); }
-.pathway-body tbody tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
-.pathway-body tbody tr:last-child { border-bottom: none; }
-.pathway-body td { padding: 0.7rem 0.8rem; color: var(--text); }
-.pathway-body td.val-product { color: white; font-weight: 600; text-align: center; }
-.pathway-body td.val-baseline { color: var(--text-dim); text-align: center; }
-.pathway-body td.val-improve { color: var(--emerald); font-weight: 700; text-align: center; }
-.pathway-note { font-size: 0.75rem; color: var(--text-dim); }
-.pathway-cta {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  color: var(--cyan); font-weight: 600; font-size: 0.875rem;
-  text-decoration: none; margin-top: 0.75rem; transition: color 0.2s;
-}
-.pathway-cta:hover { color: var(--cyan-light); }
-
-/* NASA QUOTE */
-.nasa-section {
-  background: var(--bg2);
-  background-image:
-    radial-gradient(800px 600px at 50% 100%, rgba(109,0,255,0.15) 0, transparent 70%),
-    radial-gradient(600px 400px at 10% 50%, rgba(0,180,255,0.08) 0, transparent 60%);
-  padding: 5rem 2rem;
-  border-top: 1px solid rgba(109,0,255,0.2);
-  border-bottom: 1px solid rgba(0,180,255,0.15);
-}
-.nasa-inner { max-width: 900px; margin: 0 auto; text-align: center; }
-.nasa-badge {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  background: rgba(0,180,255,0.08); border: 1px solid rgba(0,180,255,0.25);
-  color: var(--cyan-light); padding: 0.5rem 1.25rem; border-radius: 100px;
-  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 2rem;
-}
-.nasa-quote {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: white; font-style: italic;
-  line-height: 1.7; margin-bottom: 1.5rem; font-weight: 300;
-}
-.nasa-quote::before { content: '\201C'; }
-.nasa-quote::after { content: '\201D'; }
-.nasa-attribution { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.25rem; }
-.nasa-attribution strong { color: white; font-weight: 700; }
-.nasa-citation { color: var(--text-dim); font-size: 0.8rem; margin-bottom: 2.5rem; }
-.nasa-chips { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-.nasa-chip {
-  background: rgba(0,180,255,0.07); border: 1px solid rgba(0,180,255,0.18);
-  color: var(--text-muted); padding: 0.4rem 1rem; border-radius: 100px;
-  font-size: 0.8rem; font-weight: 500;
-}
-
-/* PROBLEM / SOLUTION */
-.ps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-.ps-card { border-radius: 16px; padding: 2rem; }
-.ps-card--bad { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.2); }
-.ps-card--good { background: rgba(0,180,255,0.05); border: 1px solid rgba(0,180,255,0.2); }
-.ps-card h3 { font-weight: 700; font-size: 1.1rem; margin-bottom: 1.25rem; color: white; }
-.ps-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
-.ps-list li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.925rem; color: var(--text-muted); }
-.ps-list .icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
-
-/* SCIENCE */
-.science-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-.science-card { background: var(--card-bg); border: 1px solid var(--card-border-soft); border-radius: 12px; padding: 1.5rem; }
-.science-card .num { width: 36px; height: 36px; background: rgba(0,180,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--cyan); font-size: 0.9rem; margin-bottom: 0.75rem; }
-.science-card h4 { font-weight: 700; color: white; margin-bottom: 0.4rem; }
-.science-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
-
-/* STEPS */
-.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; position: relative; }
-.step-card { background: var(--card-bg); border: 1px solid var(--card-border-soft); border-radius: 16px; padding: 2rem; position: relative; }
-.step-num { width: 44px; height: 44px; background: linear-gradient(135deg, var(--cyan), var(--purple-mid)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: 1.1rem; margin-bottom: 1rem; }
-.step-card h3 { font-weight: 700; color: white; margin-bottom: 0.5rem; }
-.step-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
-.step-note { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.75rem; font-style: italic; }
-
-/* APPLICATIONS */
-.apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-.app-card { border: 1px solid var(--card-border-soft); border-radius: 12px; padding: 1.75rem; background: var(--card-bg); transition: border-color 0.2s; }
-.app-card:hover { border-color: var(--card-border); }
-.app-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
-.app-card h3 { font-weight: 700; color: white; margin-bottom: 0.5rem; }
-.app-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
-
-/* FAQ */
-.faq-list { display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin: 0 auto; }
-details {
-  border: 1px solid var(--card-border-soft); border-radius: 12px; overflow: hidden;
-  background: var(--card-bg);
-}
-details summary {
-  padding: 1.25rem 1.5rem; cursor: pointer; font-weight: 600; color: white;
-  display: flex; justify-content: space-between; align-items: center;
-  list-style: none; user-select: none;
-}
-details summary::-webkit-details-marker { display: none; }
-details summary::after { content: '+'; font-size: 1.25rem; color: var(--cyan); font-weight: 300; flex-shrink: 0; }
-details[open] summary::after { content: '−'; }
-details[open] summary { border-bottom: 1px solid rgba(255,255,255,0.06); }
-.faq-answer { padding: 1.25rem 1.5rem; font-size: 0.925rem; color: var(--text-muted); line-height: 1.7; }
-
-/* CONTACT */
-.contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
-.contact-form { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 2.5rem; }
-.contact-form h3 { font-weight: 700; font-size: 1.25rem; color: white; margin-bottom: 1.5rem; }
-.form-group { margin-bottom: 1.25rem; }
-.form-group label { display: block; font-weight: 600; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.35rem; }
-.form-group input, .form-group select, .form-group textarea {
-  width: 100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
-  padding: 0.75rem 1rem; font-family: inherit; font-size: 0.925rem; color: white;
-  transition: border-color 0.2s; background: rgba(255,255,255,0.04);
-}
-.form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-dim); }
-.form-group select option { background: var(--bg3); color: white; }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-  outline: none; border-color: var(--cyan); background: rgba(0,180,255,0.05);
-}
-.form-group textarea { min-height: 110px; resize: vertical; }
-.form-submit { width: 100%; background: linear-gradient(135deg, var(--cyan), var(--purple-mid)); color: white; border: none; padding: 0.875rem; border-radius: 8px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: opacity 0.2s; }
-.form-submit:hover { opacity: 0.85; }
-.form-fine { font-size: 0.72rem; color: var(--text-dim); margin-top: 0.75rem; }
-.contact-info h3 { font-weight: 700; font-size: 1.5rem; color: white; margin-bottom: 0.75rem; }
-.contact-info p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
-.contact-detail { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; color: var(--text-muted); }
-.contact-detail a { color: var(--cyan); text-decoration: none; font-weight: 600; }
-.about-box { background: rgba(255,255,255,0.03); border: 1px solid var(--card-border-soft); border-radius: 12px; padding: 1.5rem; }
-.about-box h4 { font-weight: 700; color: white; margin-bottom: 0.5rem; }
-.about-box p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
-.about-box a { color: var(--cyan); text-decoration: none; font-weight: 600; }
-
-/* FOOTER */
-footer {
-  background: var(--bg);
-  border-top: 1px solid rgba(0,180,255,0.1);
-  color: var(--text-muted); padding: 3rem 2rem;
-}
-.footer-inner { max-width: 1100px; margin: 0 auto; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
-.footer-brand h4 { color: white; font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; }
-.footer-brand p { font-size: 0.85rem; line-height: 1.6; max-width: 280px; }
-footer h5 { color: white; font-weight: 700; font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.05em; text-transform: uppercase; }
-footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-footer ul a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
-footer ul a:hover { color: var(--cyan); }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; }
-.footer-bottom p { font-size: 0.75rem; }
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .pathway-grid, .ps-grid, .contact-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-}
-</style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Flexiphene<span>™</span></a>
+  <a href="/" class="nav-logo">Flexiphene<span>™</span></a>
   <ul class="nav-links">
     <li><a href="#technology">Technology</a></li>
     <li><a href="#applications">Applications</a></li>
@@ -595,36 +277,42 @@ footer ul a:hover { color: var(--cyan); }
     <h2 class="section-title">Performance That Scales Across Industries</h2>
     <p class="section-sub">Flexiphene™ is a platform technology — each formulation is engineered for a specific use case, giving scientists and engineers the freedom to push boundaries with confidence.</p>
     <div class="apps-grid">
-      <div class="app-card">
+      <a href="polymer-reinforcement.html" class="app-card">
         <div class="app-icon">🔬</div>
         <h3>Polymer Reinforcement</h3>
         <p>Double-digit strength gains at low loadings without sacrificing flexibility or processability. Validated in PA 66, epoxy, polyurethane, and PEEK systems.</p>
-      </div>
-      <div class="app-card">
+        <span class="app-card-link">Explore application →</span>
+      </a>
+      <a href="antiballistic-composites.html" class="app-card">
         <div class="app-icon">🛡️</div>
         <h3>Antiballistic &amp; Structural Composites</h3>
         <p>Enhanced energy absorption and delamination resistance through nanocarbon bridging. Targeted at aerospace, defense, and next-generation protective systems.</p>
-      </div>
-      <div class="app-card">
+        <span class="app-card-link">Explore application →</span>
+      </a>
+      <a href="conductive-films-coatings.html" class="app-card">
         <div class="app-icon">📡</div>
         <h3>Conductive Films &amp; Coatings</h3>
         <p>Uniform, durable conductivity for chemical sensors, EMI shielding, electrostatic control, and transparent conductive films — backed by NASA JPL data.</p>
-      </div>
-      <div class="app-card">
+        <span class="app-card-link">Explore application →</span>
+      </a>
+      <a href="advanced-buckypapers.html" class="app-card">
         <div class="app-icon">📄</div>
         <h3>Advanced Buckypapers</h3>
         <p>Stable, conductive or magnetic sheets for filtration, sensing, and lightweight structural applications. Versatile platform for novel material architectures.</p>
-      </div>
-      <div class="app-card">
+        <span class="app-card-link">Explore application →</span>
+      </a>
+      <a href="energy-sensing-systems.html" class="app-card">
         <div class="app-icon">🔋</div>
         <h3>Energy &amp; Sensing Systems</h3>
         <p>Improved electrode stability and signal consistency in batteries, supercapacitors, and electrochemical detection platforms. Reproducible results across 4+ months of testing.</p>
-      </div>
-      <div class="app-card">
+        <span class="app-card-link">Explore application →</span>
+      </a>
+      <a href="space-mission-critical.html" class="app-card">
         <div class="app-icon">🚀</div>
         <h3>Space &amp; Mission-Critical</h3>
         <p>Evaluated by NASA JPL for miniature in-situ instrumentation for planetary exploration. Space-mission qualified performance under demanding environmental conditions.</p>
-      </div>
+        <span class="app-card-link">Explore application →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -830,6 +518,53 @@ footer ul a:hover { color: var(--cyan); }
 
   counters.forEach(function(el) { observer.observe(el); });
 })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://flexiphene.ctimaterials.com/#organization",
+      "name": "CTI Materials / CheapTubes Inc.",
+      "url": "https://www.cheaptubes.com",
+      "logo": "https://flexiphene.ctimaterials.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "sales@ctimaterials.com",
+        "contactType": "sales"
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://flexiphene.ctimaterials.com/#product",
+      "name": "Flexiphene™ Nanocarbon Dispersion",
+      "description": "Patented, NASA-validated nanocarbon dispersion delivering 100× lower resistance, 96× higher capacitance, and +19% polymer strength at 1 wt.% loading.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Flexiphene™"
+      },
+      "manufacturer": {
+        "@id": "https://flexiphene.ctimaterials.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "seller": {
+          "@id": "https://flexiphene.ctimaterials.com/#organization"
+        }
+      }
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://flexiphene.ctimaterials.com/",
+      "name": "Flexiphene™ by CTI Materials",
+      "description": "NASA-validated nanocarbon dispersion technology"
+    }
+  ]
+}
 </script>
 </body>
 </html>
