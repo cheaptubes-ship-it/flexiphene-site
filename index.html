@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexiphene™ | NASA-Validated Nanocarbon Dispersion | CTI Materials</title>
+<meta name="description" content="Flexiphene™ delivers NASA-validated nanocarbon dispersion: 100× lower resistance, 96× higher capacitance, +19% polymer strength at 1% loading. U.S. Patented. Free sample.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #050814;
+  --bg2: #070d1f;
+  --bg3: #0a1024;
+  --bg4: #0f1733;
+  --cyan: #00b4ff;
+  --cyan-light: #24e1ff;
+  --purple: #6d00ff;
+  --purple-mid: #8b2fff;
+  --emerald: #34d399;
+  --lime: #b7ff5a;
+  --white: #ffffff;
+  --card-bg: #0d1530;
+  --card-border: rgba(0,180,255,0.15);
+  --card-border-soft: rgba(255,255,255,0.07);
+  --text: #e2e8f0;
+  --text-muted: rgba(255,255,255,0.55);
+  --text-dim: rgba(255,255,255,0.35);
+  --cyan-glow: rgba(0,180,255,0.18);
+  --purple-glow: rgba(109,0,255,0.18);
+  --section-alt: #080e1e;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6;
+  background: radial-gradient(80vw 60vh at 60% -10%, rgba(0,180,255,.05), transparent 60%), #050814;
+}
+
+/* Glass morphism */
+.glass {
+  background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+.glass-strong {
+  background: linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.06));
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.glow-border { box-shadow: inset 0 0 0 1px rgba(0,180,255,.35), 0 0 0 1px rgba(0,180,255,.15); }
+.shadow-glow { box-shadow: 0 0 0 1px rgba(0,180,255,.25), 0 10px 30px rgba(0,0,0,.35), 0 0 40px rgba(0,180,255,.12); }
+
+/* Gradient text utility */
+.grad-text {
+  background: linear-gradient(90deg, #00b4ff, #ffffff, #6d00ff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(0,180,255,.65));
+}
+/* Pulse animation */
+.pulse-ring { position: relative; }
+.pulse-ring::before {
+  content:''; position:absolute; inset:-6px; border-radius:inherit;
+  border:2px solid rgba(0,180,255,.35); filter:blur(5px); opacity:.7;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:.2;transform:scale(.98);} 50%{opacity:.6;transform:scale(1.02);} }
+/* Count-up */
+.countup { transition: opacity .4s, transform .4s; }
+.countup.hidden-count { opacity:0; transform:translateY(6px); }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(5,8,20,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,180,255,0.1);
+  padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px;
+}
+.nav-logo { color: white; font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+.nav-logo span { color: var(--cyan); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: white; }
+.nav-cta {
+  background: linear-gradient(135deg, var(--cyan), var(--purple-mid));
+  color: white; padding: 0.5rem 1.25rem;
+  border-radius: 6px; text-decoration: none; font-size: 0.875rem; font-weight: 700;
+  transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* HERO */
+.hero {
+  background: var(--bg2);
+  background-image:
+    radial-gradient(1200px 800px at 20% -10%, var(--cyan-glow) 0, transparent 60%),
+    radial-gradient(1000px 600px at 90% 10%, var(--purple-glow) 0, transparent 60%);
+  padding: 120px 2rem 80px; text-align: center; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,180,255,0.3), rgba(109,0,255,0.3), transparent);
+}
+.hero-inner { position: relative; max-width: 900px; margin: 0 auto; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(0,180,255,0.08); border: 1px solid rgba(0,180,255,0.25);
+  color: var(--cyan-light); padding: 0.4rem 1rem; border-radius: 100px;
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; color: white;
+  line-height: 1.15; margin-bottom: 1.25rem;
+}
+/* grad-text defined globally above */
+.hero-sub {
+  font-size: 1.1rem; color: var(--text-muted); max-width: 680px;
+  margin: 0 auto 1rem; line-height: 1.7;
+}
+.hero-patent { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 2.5rem; }
+.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3.5rem; }
+.btn-primary {
+  background: linear-gradient(135deg, var(--cyan), var(--purple-mid));
+  color: white; padding: 0.875rem 2rem;
+  border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem;
+  transition: all 0.2s; box-shadow: 0 4px 24px rgba(0,180,255,0.3);
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 6px 30px rgba(0,180,255,0.4); }
+.btn-secondary {
+  background: rgba(255,255,255,0.04); color: white; padding: 0.875rem 2rem;
+  border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem;
+  border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: var(--cyan); background: rgba(0,180,255,0.06); }
+.trust-badges { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+.trust-badge {
+  display: flex; align-items: center; gap: 0.5rem;
+  color: var(--text-muted); font-size: 0.85rem; font-weight: 500;
+}
+.trust-badge .icon { color: var(--cyan); font-size: 1rem; }
+
+/* STATS STRIP */
+.stats-strip {
+  background: var(--bg2); border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06); padding: 3rem 2rem;
+}
+.stats-strip-inner { max-width: 1100px; margin: 0 auto; }
+.stats-label { text-align: center; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: var(--text-dim); text-transform: uppercase; margin-bottom: 1.5rem; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; }
+.stat-card {
+  border-radius: 16px; padding: 1.5rem; text-align: center;
+}
+.stat-number {
+  font-size: 2.25rem; font-weight: 800; line-height: 1;
+  background: linear-gradient(90deg, #00b4ff, #ffffff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.stat-unit { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-top: 0.25rem; }
+.stat-desc { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem; }
+.stat-tag {
+  display: inline-block; background: rgba(52,211,153,0.12); color: var(--emerald);
+  font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px; margin-top: 0.5rem;
+}
+
+/* SECTIONS */
+.section { padding: 5rem 2rem; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cyan); margin-bottom: 0.75rem; }
+.section-title { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; color: white; line-height: 1.2; margin-bottom: 1rem; }
+.section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 680px; line-height: 1.7; margin-bottom: 2.5rem; }
+.section-sub.wide { max-width: 100%; }
+.section--alt { background: var(--section-alt); }
+
+/* DUAL PATHWAY */
+.pathway-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 2rem; }
+.pathway-card { border-radius: 20px; overflow: hidden; }
+.pathway-header {
+  padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.pathway-icon { font-size: 2rem; }
+.pathway-title { color: white; font-weight: 700; font-size: 1.1rem; }
+.pathway-subtitle { color: var(--text-muted); font-size: 0.85rem; }
+.pathway-body { padding: 1.5rem 2rem; }
+.pathway-body table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin-bottom: 1rem; }
+.pathway-body thead tr { border-bottom: 1px solid rgba(255,255,255,0.1); }
+.pathway-body th { padding: 0.7rem 0.8rem; font-weight: 700; font-size: 0.78rem; }
+.pathway-body th.col-product { color: var(--cyan); }
+.pathway-body th.col-baseline { color: var(--text-dim); }
+.pathway-body th.col-improve { color: var(--emerald); }
+.pathway-body tbody tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
+.pathway-body tbody tr:last-child { border-bottom: none; }
+.pathway-body td { padding: 0.7rem 0.8rem; color: var(--text); }
+.pathway-body td.val-product { color: white; font-weight: 600; text-align: center; }
+.pathway-body td.val-baseline { color: var(--text-dim); text-align: center; }
+.pathway-body td.val-improve { color: var(--emerald); font-weight: 700; text-align: center; }
+.pathway-note { font-size: 0.75rem; color: var(--text-dim); }
+.pathway-cta {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  color: var(--cyan); font-weight: 600; font-size: 0.875rem;
+  text-decoration: none; margin-top: 0.75rem; transition: color 0.2s;
+}
+.pathway-cta:hover { color: var(--cyan-light); }
+
+/* NASA QUOTE */
+.nasa-section {
+  background: var(--bg2);
+  background-image:
+    radial-gradient(800px 600px at 50% 100%, rgba(109,0,255,0.15) 0, transparent 70%),
+    radial-gradient(600px 400px at 10% 50%, rgba(0,180,255,0.08) 0, transparent 60%);
+  padding: 5rem 2rem;
+  border-top: 1px solid rgba(109,0,255,0.2);
+  border-bottom: 1px solid rgba(0,180,255,0.15);
+}
+.nasa-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+.nasa-badge {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: rgba(0,180,255,0.08); border: 1px solid rgba(0,180,255,0.25);
+  color: var(--cyan-light); padding: 0.5rem 1.25rem; border-radius: 100px;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 2rem;
+}
+.nasa-quote {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: white; font-style: italic;
+  line-height: 1.7; margin-bottom: 1.5rem; font-weight: 300;
+}
+.nasa-quote::before { content: '\201C'; }
+.nasa-quote::after { content: '\201D'; }
+.nasa-attribution { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 0.25rem; }
+.nasa-attribution strong { color: white; font-weight: 700; }
+.nasa-citation { color: var(--text-dim); font-size: 0.8rem; margin-bottom: 2.5rem; }
+.nasa-chips { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.nasa-chip {
+  background: rgba(0,180,255,0.07); border: 1px solid rgba(0,180,255,0.18);
+  color: var(--text-muted); padding: 0.4rem 1rem; border-radius: 100px;
+  font-size: 0.8rem; font-weight: 500;
+}
+
+/* PROBLEM / SOLUTION */
+.ps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.ps-card { border-radius: 16px; padding: 2rem; }
+.ps-card--bad { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.2); }
+.ps-card--good { background: rgba(0,180,255,0.05); border: 1px solid rgba(0,180,255,0.2); }
+.ps-card h3 { font-weight: 700; font-size: 1.1rem; margin-bottom: 1.25rem; color: white; }
+.ps-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+.ps-list li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.925rem; color: var(--text-muted); }
+.ps-list .icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+/* SCIENCE */
+.science-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.science-card { background: var(--card-bg); border: 1px solid var(--card-border-soft); border-radius: 12px; padding: 1.5rem; }
+.science-card .num { width: 36px; height: 36px; background: rgba(0,180,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: var(--cyan); font-size: 0.9rem; margin-bottom: 0.75rem; }
+.science-card h4 { font-weight: 700; color: white; margin-bottom: 0.4rem; }
+.science-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+
+/* STEPS */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; position: relative; }
+.step-card { background: var(--card-bg); border: 1px solid var(--card-border-soft); border-radius: 16px; padding: 2rem; position: relative; }
+.step-num { width: 44px; height: 44px; background: linear-gradient(135deg, var(--cyan), var(--purple-mid)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: 1.1rem; margin-bottom: 1rem; }
+.step-card h3 { font-weight: 700; color: white; margin-bottom: 0.5rem; }
+.step-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+.step-note { font-size: 0.78rem; color: var(--text-dim); margin-top: 0.75rem; font-style: italic; }
+
+/* APPLICATIONS */
+.apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+.app-card { border: 1px solid var(--card-border-soft); border-radius: 12px; padding: 1.75rem; background: var(--card-bg); transition: border-color 0.2s; }
+.app-card:hover { border-color: var(--card-border); }
+.app-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+.app-card h3 { font-weight: 700; color: white; margin-bottom: 0.5rem; }
+.app-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin: 0 auto; }
+details {
+  border: 1px solid var(--card-border-soft); border-radius: 12px; overflow: hidden;
+  background: var(--card-bg);
+}
+details summary {
+  padding: 1.25rem 1.5rem; cursor: pointer; font-weight: 600; color: white;
+  display: flex; justify-content: space-between; align-items: center;
+  list-style: none; user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: '+'; font-size: 1.25rem; color: var(--cyan); font-weight: 300; flex-shrink: 0; }
+details[open] summary::after { content: '−'; }
+details[open] summary { border-bottom: 1px solid rgba(255,255,255,0.06); }
+.faq-answer { padding: 1.25rem 1.5rem; font-size: 0.925rem; color: var(--text-muted); line-height: 1.7; }
+
+/* CONTACT */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; }
+.contact-form { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 2.5rem; }
+.contact-form h3 { font-weight: 700; font-size: 1.25rem; color: white; margin-bottom: 1.5rem; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label { display: block; font-weight: 600; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.35rem; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+  padding: 0.75rem 1rem; font-family: inherit; font-size: 0.925rem; color: white;
+  transition: border-color 0.2s; background: rgba(255,255,255,0.04);
+}
+.form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-dim); }
+.form-group select option { background: var(--bg3); color: white; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: var(--cyan); background: rgba(0,180,255,0.05);
+}
+.form-group textarea { min-height: 110px; resize: vertical; }
+.form-submit { width: 100%; background: linear-gradient(135deg, var(--cyan), var(--purple-mid)); color: white; border: none; padding: 0.875rem; border-radius: 8px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: opacity 0.2s; }
+.form-submit:hover { opacity: 0.85; }
+.form-fine { font-size: 0.72rem; color: var(--text-dim); margin-top: 0.75rem; }
+.contact-info h3 { font-weight: 700; font-size: 1.5rem; color: white; margin-bottom: 0.75rem; }
+.contact-info p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+.contact-detail { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; color: var(--text-muted); }
+.contact-detail a { color: var(--cyan); text-decoration: none; font-weight: 600; }
+.about-box { background: rgba(255,255,255,0.03); border: 1px solid var(--card-border-soft); border-radius: 12px; padding: 1.5rem; }
+.about-box h4 { font-weight: 700; color: white; margin-bottom: 0.5rem; }
+.about-box p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+.about-box a { color: var(--cyan); text-decoration: none; font-weight: 600; }
+
+/* FOOTER */
+footer {
+  background: var(--bg);
+  border-top: 1px solid rgba(0,180,255,0.1);
+  color: var(--text-muted); padding: 3rem 2rem;
+}
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+.footer-brand h4 { color: white; font-weight: 800; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.footer-brand p { font-size: 0.85rem; line-height: 1.6; max-width: 280px; }
+footer h5 { color: white; font-weight: 700; font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.05em; text-transform: uppercase; }
+footer ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+footer ul a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+footer ul a:hover { color: var(--cyan); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; }
+.footer-bottom p { font-size: 0.75rem; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .pathway-grid, .ps-grid, .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Flexiphene<span>™</span></a>
+  <ul class="nav-links">
+    <li><a href="#technology">Technology</a></li>
+    <li><a href="#applications">Applications</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get Free Sample</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🛰️ NASA JPL Validated · U.S. Patents 10,049,783 / 11,961,630 B2</div>
+    <h1>Stop Wasting Time on Failed Batches.<br><span class="grad-text">Flexiphene™ Delivers Every Time.</span></h1>
+    <p class="hero-sub">Patented, NASA-validated nanocarbon dispersion technology for researchers, engineers, and product innovators who demand stable, high-performance materials — the first time, every time.</p>
+    <p class="hero-patent">U.S. Patents 10,049,783 / 11,961,630 B2 and others pending. Certain processes and formulations are protected by U.S. and international patents and trade secrets.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Request Free Sample Kit</a>
+      <a href="#research" class="btn-secondary">View Research Data</a>
+    </div>
+    <div class="trust-badges">
+      <div class="trust-badge"><span class="icon">✓</span> NASA Validated</div>
+      <div class="trust-badge"><span class="icon">✓</span> U.S. Patented</div>
+      <div class="trust-badge"><span class="icon">✓</span> 20+ Years Supplying Aerospace &amp; Research</div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY STATS -->
+<div class="stats-strip">
+  <div class="stats-strip-inner">
+    <div class="stats-label">Validated Performance — Published Data</div>
+    <div class="stats-grid">
+      <div class="stat-card glass glow-border">
+        <div class="stat-number countup hidden-count" data-target="100" data-suffix="×">0×</div>
+        <div class="stat-unit">Lower Resistance</div>
+        <div class="stat-desc">0.09 ± 0.03 MΩ</div>
+        <div class="stat-tag">vs. 10+ MΩ standard</div>
+      </div>
+      <div class="stat-card glass glow-border">
+        <div class="stat-number countup hidden-count" data-target="96" data-suffix="×">0×</div>
+        <div class="stat-unit">Higher Capacitance</div>
+        <div class="stat-desc">50 µF vs. 0.52 µF</div>
+        <div class="stat-tag">NASA JPL validated</div>
+      </div>
+      <div class="stat-card glass glow-border">
+        <div class="stat-number countup hidden-count" data-target="95" data-suffix="×">0×</div>
+        <div class="stat-unit">More Stable</div>
+        <div class="stat-desc">20 ± 8 µV/s EMF drift</div>
+        <div class="stat-tag">vs. 1900 µV/s standard</div>
+      </div>
+      <div class="stat-card glass glow-border">
+        <div class="stat-number countup hidden-count" data-target="19" data-prefix="+">0%</div>
+        <div class="stat-unit">Tensile Strength</div>
+        <div class="stat-desc">PA 66 at 1 wt.% loading</div>
+        <div class="stat-tag">ASTM tested · SEM verified</div>
+      </div>
+      <div class="stat-card glass glow-border">
+        <div class="stat-number countup hidden-count" data-target="90" data-suffix="%">0%</div>
+        <div class="stat-unit">Batch Yield</div>
+        <div class="stat-desc">83% retention / 4 months</div>
+        <div class="stat-tag">Proven reproducibility</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DUAL PATHWAY -->
+<section class="section" id="technology">
+  <div class="section-inner">
+    <div class="section-label">One Technology. Two Proven Pathways.</div>
+    <h2 class="section-title">The Only Nanocarbon Dispersion Validated<br>by NASA and Proven in Engineering Polymers</h2>
+    <p class="section-sub">Flexiphene™ delivers breakthrough performance in both electronics-grade precision applications and high-performance structural composites — with published, ASTM-tested data to back every claim.</p>
+    <div class="pathway-grid">
+      <!-- ELECTRONICS -->
+      <div class="pathway-card glass-strong glow-border">
+        <div class="pathway-header">
+          <div class="pathway-icon">⚡</div>
+          <div>
+            <div class="pathway-title">Electronics &amp; Sensors</div>
+            <div class="pathway-subtitle">100× better electrical performance · NASA JPL validated</div>
+          </div>
+        </div>
+        <div class="pathway-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th class="col-product" style="text-align:center">Flexiphene™</th>
+                <th class="col-baseline" style="text-align:center">Industry Std.</th>
+                <th class="col-improve" style="text-align:center">Improvement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Electrical Resistance</td><td class="val-product">0.09 ± 0.03 MΩ</td><td class="val-baseline">10+ MΩ</td><td class="val-improve">100× Lower</td></tr>
+              <tr><td>Capacitance</td><td class="val-product">50 µF</td><td class="val-baseline">0.52 µF</td><td class="val-improve">96× Higher</td></tr>
+              <tr><td>EMF Drift</td><td class="val-product">20 ± 8 µV/s</td><td class="val-baseline">1900 µV/s</td><td class="val-improve">95× More Stable</td></tr>
+              <tr><td>Batch Consistency</td><td class="val-product">90% yield</td><td class="val-baseline">Variable</td><td class="val-improve">Highest</td></tr>
+              <tr><td>Long-term Retention</td><td class="val-product">83% / 4 mo</td><td class="val-baseline">Degrades</td><td class="val-improve">Proven</td></tr>
+            </tbody>
+          </table>
+          <p class="pathway-note">Data: Electroanalysis (2020) — NASA JPL evaluation of GO-CNT SC-ISEs.</p>
+          <a href="#contact" class="pathway-cta">Request Electronics Sample →</a>
+        </div>
+      </div>
+      <!-- POLYMERS -->
+      <div class="pathway-card glass-strong glow-border">
+        <div class="pathway-header">
+          <div class="pathway-icon">🔩</div>
+          <div>
+            <div class="pathway-title">Structural Polymers</div>
+            <div class="pathway-subtitle">Double-digit strength gains · 1 wt.% loading · SEM verified</div>
+          </div>
+        </div>
+        <div class="pathway-body">
+          <table>
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th class="col-baseline" style="text-align:center">Baseline PA 66</th>
+                <th class="col-product" style="text-align:center">With Flexiphene™</th>
+                <th class="col-improve" style="text-align:center">Improvement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Tensile Strength</td><td class="val-baseline">Baseline</td><td class="val-product">Enhanced</td><td class="val-improve">+19%</td></tr>
+              <tr><td>Flexural Modulus</td><td class="val-baseline">Baseline</td><td class="val-product">Enhanced</td><td class="val-improve">+18.9%</td></tr>
+              <tr><td>Tensile Modulus</td><td class="val-baseline">Baseline</td><td class="val-product">Enhanced</td><td class="val-improve">+16%</td></tr>
+              <tr><td>Flexural Strength</td><td class="val-baseline">Baseline</td><td class="val-product">Enhanced</td><td class="val-improve">+10.5%</td></tr>
+              <tr><td>Agglomeration</td><td class="val-baseline">Present</td><td class="val-product">None observed</td><td class="val-improve">SEM verified</td></tr>
+            </tbody>
+          </table>
+          <p class="pathway-note">Test standards: Type V tensile specimens (10 mm/min), ASTM D790 flexural (14:1 span, 1 mm/min).</p>
+          <a href="#contact" class="pathway-cta">Request Polymer Sample →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NASA QUOTE -->
+<section class="nasa-section" id="research">
+  <div class="nasa-inner">
+    <div class="nasa-badge">🛰️ Peer-Reviewed · NASA JPL · Electroanalysis 2020</div>
+    <blockquote class="nasa-quote">The novel GO-CNT based SC-ISEs were the most stable as demonstrated by their large capacitance, low resistance, and reproducible behavior.</blockquote>
+    <p class="nasa-attribution"><strong>Dr. Aaron C. Noell</strong>, Senior Research Scientist</p>
+    <p class="nasa-attribution">NASA Jet Propulsion Laboratory · California Institute of Technology</p>
+    <p class="nasa-citation">Published: <em>Electroanalysis</em> (2020) · Space-mission instrumentation evaluation · Peer-reviewed</p>
+    <div class="nasa-chips">
+      <span class="nasa-chip">✓ Peer-Reviewed Publication</span>
+      <span class="nasa-chip">✓ Space-Mission Qualified</span>
+      <span class="nasa-chip">✓ 4+ Months Long-Term Data</span>
+      <span class="nasa-chip">✓ ASTM D790 Tested</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM / SOLUTION -->
+<section class="section section--alt">
+  <div class="section-inner">
+    <div class="section-label">The Challenge</div>
+    <h2 class="section-title">When Dispersion Fails, Everything Fails</h2>
+    <p class="section-sub">Every failed batch costs research time, grant funding, and credibility. Flexiphene™ was built to eliminate that problem permanently.</p>
+    <div class="ps-grid">
+      <div class="ps-card ps-card--bad">
+        <h3>❌ Traditional Dispersion Problems</h3>
+        <ul class="ps-list">
+          <li><span class="icon">✕</span><span>Surfactant contamination alters electrical and mechanical properties</span></li>
+          <li><span class="icon">✕</span><span>Damaged nanostructures from aggressive acid functionalization</span></li>
+          <li><span class="icon">✕</span><span>Loss of conductivity through broken electron pathways</span></li>
+          <li><span class="icon">✕</span><span>Inconsistent batch-to-batch performance</span></li>
+          <li><span class="icon">✕</span><span>Nanoparticle agglomeration reducing effectiveness</span></li>
+          <li><span class="icon">✕</span><span>High loading requirements increasing cost and weight</span></li>
+        </ul>
+        <p style="margin-top:1rem; font-size:0.875rem; color:rgba(239,68,68,0.85); font-weight:600;">Result: Wasted time, funding, and credibility</p>
+      </div>
+      <div class="ps-card ps-card--good">
+        <h3>✅ Flexiphene™ Advantages</h3>
+        <ul class="ps-list">
+          <li><span class="icon">✓</span><span>100% surfactant-free — no contamination, no property loss</span></li>
+          <li><span class="icon">✓</span><span>Intact structural integrity via proprietary surface engineering</span></li>
+          <li><span class="icon">✓</span><span>Continuous electron pathways for reliable conductivity</span></li>
+          <li><span class="icon">✓</span><span>90% batch reproducibility — proven in published research</span></li>
+          <li><span class="icon">✓</span><span>No agglomeration observed — SEM-verified dispersion quality</span></li>
+          <li><span class="icon">✓</span><span>Significant improvements at just 1 wt.% loading</span></li>
+        </ul>
+        <p style="margin-top:1rem; font-size:0.875rem; color:var(--cyan); font-weight:600;">Result: Breakthrough materials performance, every batch</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE SCIENCE -->
+<section class="section" id="technology-detail">
+  <div class="section-inner">
+    <div class="section-label">The Science Behind Stability</div>
+    <h2 class="section-title">Why Flexiphene™ Works Where Others Don't</h2>
+    <p class="section-sub">Flexiphene™ unites multiple carbon allotropes into a single, stable nanostructure through proprietary surface engineering — delivering properties that conventional dispersions can't match.</p>
+    <div class="science-grid">
+      <div class="science-card"><div class="num">1</div><h4>Surfactant-Free Dispersion</h4><p>No contamination, no property loss. Pure nanocarbon performance without the interference of surfactant residues.</p></div>
+      <div class="science-card"><div class="num">2</div><h4>Structural Integrity</h4><p>High aspect-ratio carbons remain intact for superior load transfer and electron transport. No acid-damage to the carbon structure.</p></div>
+      <div class="science-card"><div class="num">3</div><h4>Continuous Electron Pathways</h4><p>Nanocarbon bridges maintain uninterrupted conductivity throughout the matrix — the key to our 100× resistance improvement.</p></div>
+      <div class="science-card"><div class="num">4</div><h4>High Functional Content</h4><p>Up to 10× higher interfacial activity than typical oxidized CNTs — more contact area, more reinforcement per gram.</p></div>
+      <div class="science-card"><div class="num">5</div><h4>Easily Reducible</h4><p>Post-processing reduction restores pristine performance characteristics when maximum conductivity is required.</p></div>
+      <div class="science-card"><div class="num">6</div><h4>Universal Compatibility</h4><p>Works with thermoplastics, thermosets, elastomers, and coatings. Validated in PA 66, epoxy, polyurethane, PEEK, and more.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- THREE STEPS -->
+<section class="section section--alt">
+  <div class="section-inner">
+    <div class="section-label" style="text-align:center">Getting Started</div>
+    <h2 class="section-title" style="text-align:center">Three Simple Steps to Breakthrough Results</h2>
+    <p class="section-sub" style="text-align:center; margin-left:auto; margin-right:auto;">From your first sample to full-scale production — we're with you every step.</p>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Get Your Free Sample Kit</h3>
+        <p>We ship an application-ready sample along with the full technical datasheet — real performance data for your specific use case.</p>
+        <p class="step-note">Electronics: GO-CNT SC-ISE formulations · Polymers: PA 66 masterbatch at 1 wt.%</p>
+        <p class="step-note">Samples provided under NDA &amp; MTA to protect both parties' IP</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Test in Your Lab</h3>
+        <p>Evaluate Flexiphene™ with your specific materials, equipment, and protocols. Our materials scientists are available by phone and email throughout.</p>
+        <p class="step-note">Direct access to our R&amp;D team — not a general support queue</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Scale to Production</h3>
+        <p>Once results are confirmed, move to production quantities. Custom formulations and volume pricing available for qualified projects.</p>
+        <p class="step-note">Custom formulations · Volume pricing · 3–5 business day US shipping</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;">
+      <a href="#contact" class="btn-primary">Get Started Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="section" id="applications">
+  <div class="section-inner">
+    <div class="section-label">Application Areas</div>
+    <h2 class="section-title">Performance That Scales Across Industries</h2>
+    <p class="section-sub">Flexiphene™ is a platform technology — each formulation is engineered for a specific use case, giving scientists and engineers the freedom to push boundaries with confidence.</p>
+    <div class="apps-grid">
+      <div class="app-card">
+        <div class="app-icon">🔬</div>
+        <h3>Polymer Reinforcement</h3>
+        <p>Double-digit strength gains at low loadings without sacrificing flexibility or processability. Validated in PA 66, epoxy, polyurethane, and PEEK systems.</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">🛡️</div>
+        <h3>Antiballistic &amp; Structural Composites</h3>
+        <p>Enhanced energy absorption and delamination resistance through nanocarbon bridging. Targeted at aerospace, defense, and next-generation protective systems.</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">📡</div>
+        <h3>Conductive Films &amp; Coatings</h3>
+        <p>Uniform, durable conductivity for chemical sensors, EMI shielding, electrostatic control, and transparent conductive films — backed by NASA JPL data.</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">📄</div>
+        <h3>Advanced Buckypapers</h3>
+        <p>Stable, conductive or magnetic sheets for filtration, sensing, and lightweight structural applications. Versatile platform for novel material architectures.</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">🔋</div>
+        <h3>Energy &amp; Sensing Systems</h3>
+        <p>Improved electrode stability and signal consistency in batteries, supercapacitors, and electrochemical detection platforms. Reproducible results across 4+ months of testing.</p>
+      </div>
+      <div class="app-card">
+        <div class="app-icon">🚀</div>
+        <h3>Space &amp; Mission-Critical</h3>
+        <p>Evaluated by NASA JPL for miniature in-situ instrumentation for planetary exploration. Space-mission qualified performance under demanding environmental conditions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--alt" id="faq">
+  <div class="section-inner">
+    <div class="section-label" style="text-align:center">FAQ</div>
+    <h2 class="section-title" style="text-align:center">Common Questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>How is Flexiphene™ different from standard functionalized CNTs?</summary>
+        <div class="faq-answer">Unlike oxidized CNTs that require surfactants and damage the carbon structure during functionalization, Flexiphene™ uses proprietary surface engineering to maintain structural integrity while achieving up to 10× higher interfacial activity. The result is surfactant-free dispersion with intact nanocarbon properties — which is why our resistance measurements are 100× lower and our polymer strength gains are achieved at just 1 wt.% loading.</div>
+      </details>
+      <details>
+        <summary>What's the minimum order quantity?</summary>
+        <div class="faq-answer">We offer 10 mL liquid dispersion sample kits (equivalent to 10 g concentration) for initial testing, provided under NDA &amp; MTA agreements. Production quantities range from 100 g to multi-kilogram batches with volume discounts available. All samples ship as ready-to-use dispersions — no powder handling required. Contact us to discuss your project and initiate the standard agreements.</div>
+      </details>
+      <details>
+        <summary>Can Flexiphene™ work with my specific polymer system?</summary>
+        <div class="faq-answer">Flexiphene™ is compatible with thermoplastics, thermosets, elastomers, and coatings. We've successfully validated performance in PA 66, epoxy, polyurethane, PEEK, silicone, and many other systems. Our published PA 66 data uses 1 wt.% loading with ASTM-standard testing protocols. Our materials scientists can recommend the optimal formulation for your specific application after reviewing your processing conditions.</div>
+      </details>
+      <details>
+        <summary>How long does shipping take?</summary>
+        <div class="faq-answer">Standard US orders ship within 3–5 business days. International shipping is available with delivery times varying by location. Rush orders can be accommodated for critical research timelines or production deadlines — contact us to discuss.</div>
+      </details>
+      <details>
+        <summary>Do you provide technical support during testing?</summary>
+        <div class="faq-answer">Yes. Every order includes direct access to our materials science team by phone and email. We help optimize dispersion protocols, processing parameters, and troubleshoot any issues throughout your evaluation — think of us as an extension of your R&amp;D team, not a ticketing system.</div>
+      </details>
+      <details>
+        <summary>Is Flexiphene™ suitable for academic research publications?</summary>
+        <div class="faq-answer">Yes — Flexiphene™ technology has already appeared in peer-reviewed literature, including the NASA JPL study published in Electroanalysis (2020). We provide detailed technical specifications, characterization data, and can assist with methods sections to support your publication requirements.</div>
+      </details>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem;">
+      <a href="#contact" class="btn-primary">Contact Our Materials Science Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Get Started</div>
+        <h3 class="section-title">Let's Engineer Your Next Breakthrough</h3>
+        <p>Request a free sample kit, ask a technical question, or discuss custom formulations for your project. Our materials science team responds within one business day.</p>
+        <div class="contact-detail">
+          <span>📧 <a href="mailto:sales@ctimaterials.com">sales@ctimaterials.com</a></span>
+          <span>🚚 US orders ship in 3–5 business days</span>
+          <span>🔒 Samples provided under NDA &amp; MTA</span>
+        </div>
+        <div class="about-box">
+          <h4>About CTI Materials</h4>
+          <p>CTI Materials is the innovation arm behind <a href="https://www.cheaptubes.com" target="_blank">CheapTubes.com</a> — supplying advanced nanocarbon materials to research and industry for over 20 years. Flexiphene™ represents our proprietary platform for applications where standard dispersion approaches fall short.</p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Request Datasheet &amp; Free Sample</h3>
+        <form id="contact-form" name="flexiphene-contact" data-netlify="true" netlify-honeypot="bot-field">
+          <!-- Netlify honeypot -->
+          <div style="display:none"><input name="bot-field"></div>
+          <input type="hidden" name="form-name" value="flexiphene-contact">
+          <div class="form-group">
+            <label>Name *</label>
+            <input type="text" name="name" required placeholder="Dr. Jane Smith">
+          </div>
+          <div class="form-group">
+            <label>Organization *</label>
+            <input type="text" name="organization" required placeholder="University / Company">
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" required placeholder="you@organization.edu">
+          </div>
+          <div class="form-group">
+            <label>Application Area *</label>
+            <select name="application" required>
+              <option value="">Select your application…</option>
+              <option>Electronics &amp; Sensors (GO-CNT formulation)</option>
+              <option>Polymer Reinforcement (PA 66 masterbatch)</option>
+              <option>Antiballistic &amp; Structural Composites</option>
+              <option>Conductive Films &amp; Coatings</option>
+              <option>Energy &amp; Sensing Systems</option>
+              <option>Space / Mission-Critical</option>
+              <option>Other / Multiple Areas</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message / Requirements</label>
+            <textarea name="message" placeholder="Describe your application, polymer system, or specific performance requirements…"></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="form-submit-btn">Request Datasheet / Free Sample →</button>
+          <p class="form-fine">By submitting you agree to be contacted about your request. Samples provided under standard NDA &amp; MTA agreements.</p>
+          <div id="form-msg" style="display:none; margin-top:1rem; padding:1rem; border-radius:8px; font-size:0.9rem; font-weight:600;"></div>
+        </form>
+        <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var form = this;
+          var btn  = document.getElementById('form-submit-btn');
+          var msg  = document.getElementById('form-msg');
+          btn.textContent = 'Sending…';
+          btn.disabled = true;
+          // Netlify Forms: POST as URL-encoded to the current page
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(form)).toString()
+          })
+          .then(function(r) {
+            if (r.ok) {
+              msg.style.cssText = 'display:block;margin-top:1rem;padding:1rem;border-radius:8px;font-size:.9rem;font-weight:600;background:rgba(0,180,255,0.1);border:1px solid rgba(0,180,255,0.3);color:#24e1ff;';
+              msg.textContent = "Thanks — we'll be in touch within one business day.";
+              form.reset();
+              btn.textContent = 'Sent ✓';
+            } else {
+              throw new Error('non-ok');
+            }
+          })
+          .catch(function() {
+            msg.style.cssText = 'display:block;margin-top:1rem;padding:1rem;border-radius:8px;font-size:.9rem;font-weight:600;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#f87171;';
+            msg.textContent = 'Something went wrong — please email sales@ctimaterials.com directly.';
+            btn.textContent = 'Request Datasheet / Free Sample →';
+            btn.disabled = false;
+          });
+        });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Flexiphene™ by CTI Materials</h4>
+        <p>NASA-validated nanocarbon dispersion technology for breakthrough materials performance. Supplying advanced carbons to research and industry for 20+ years.</p>
+      </div>
+      <div>
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#technology">Technology</a></li>
+          <li><a href="#applications">Applications</a></li>
+          <li><a href="#research">Research &amp; Data</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#contact">Technical Datasheet</a></li>
+          <li><a href="https://www.cheaptubes.com" target="_blank">CheapTubes.com</a></li>
+          <li><a href="mailto:sales@ctimaterials.com">sales@ctimaterials.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CTI Materials / CheapTubes Inc. All rights reserved.</p>
+      <p>U.S. Patents 10,049,783 / 11,961,630 B2 and others pending. Certain processes and formulations are protected by U.S. and international patents and trade secrets.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Count-up animation on scroll into view
+(function() {
+  var counters = document.querySelectorAll('.countup');
+  if (!counters.length) return;
+
+  function animateCount(el) {
+    var target = parseInt(el.dataset.target, 10);
+    var suffix = el.dataset.suffix || '%';
+    var prefix = el.dataset.prefix || '';
+    var duration = 900;
+    var start = performance.now();
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+    function step(now) {
+      var elapsed = Math.min((now - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - elapsed, 3); // ease-out cubic
+      var cur = Math.round(ease * target);
+      el.textContent = prefix + cur + suffix;
+      if (elapsed < 1) requestAnimationFrame(step);
+      else el.textContent = prefix + target + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  counters.forEach(function(el) { observer.observe(el); });
+})();
+</script>
+</body>
+</html>
