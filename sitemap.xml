@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Why It Works Hub -->
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/why-flexiphene-works.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Technology Deep-Dive Pages -->
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/surfactant-free-dispersion.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/structural-integrity.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/continuous-electron-pathways.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/high-functional-content.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/easily-reducible.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/universal-compatibility.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Application Pages -->
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/polymer-reinforcement.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/antiballistic-composites.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/conductive-films-coatings.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/advanced-buckypapers.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/energy-sensing-systems.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/space-mission-critical.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SEO Capture Pages -->
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/graphene-dispersion.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flexiphene.ctimaterials.com/cnt-dispersion.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
