@@ -94,15 +94,20 @@ nav {
   padding: 80px 2rem 0;
   max-width: 1100px;
   margin: 0 auto;
+  padding-bottom: 0;
 }
 .breadcrumb-inner {
-  display: flex; align-items: center; gap: 0.5rem;
-  font-size: 0.8rem; color: var(--text-dim); padding-top: 1rem;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.82rem; color: rgba(255,255,255,0.65);
+  background: rgba(0,180,255,0.06);
+  border: 1px solid rgba(0,180,255,0.12);
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
 }
-.breadcrumb-inner a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+.breadcrumb-inner a { color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.2s; }
 .breadcrumb-inner a:hover { color: var(--cyan); }
-.breadcrumb-inner .sep { opacity: 0.4; }
-.breadcrumb-inner .current { color: var(--cyan); }
+.breadcrumb-inner .sep { color: rgba(0,180,255,0.5); }
+.breadcrumb-inner .current { color: var(--cyan); font-weight: 500; }
 
 /* --- HERO ----------------------------------------------- */
 .hero {
